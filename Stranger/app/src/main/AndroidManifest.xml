@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mactrixapp.www.stranger">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="dyKF6_W6TKRVXH0rxS28EsvkB3GOtLpsG2rAbVcb-BZmVGcC0ogsdX5_A4TcVFS91dKydxQ-b0FHxkcSIeuEOH" />
+
+        <!-- MoPub -->
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- Vungle Activities -->
+        <activity
+            android:name="com.vungle.warren.ui.VungleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.vungle.warren.ui.VungleFlexViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".Stranger"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Introduction"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserInfo"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChattingSpot"
+            android:label="@string/title_activity_strange_room"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StrangerLetter"
+            android:label="@string/title_activity_interest_realm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindStranger"
+            android:label="@string/title_activity_search_region"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StrangerListy"
+            android:label="@string/title_activity_basic_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StrangerProfile"
+            android:label="@string/title_activity_stranger_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationBoard"
+            android:label="@string/title_activity_notification_board"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewStrangerPost"
+            android:label="@string/title_activity_new_stranger_post"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewEPAds"
+            android:label="@string/title_activity_new_epads"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StrangerList"
+            android:label="@string/title_activity_stranger_listing"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Service.GeoCodeIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Service.ElectroPhyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.InterestService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.InternetService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".StrangerLetterViewer"
+            android:label="@string/title_activity_stranger_letter_viewer"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".BroadcastReceiver.GeoReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".BroadcastReceiver.InternetBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".EPADViewer"
+            android:label="@string/title_activity_epadviewer"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".BroadcastReceiver.RestartReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".StrangersGroup"
+            android:label="@string/title_activity_strangers_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GroupChat"
+            android:label="@string/title_activity_group_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchGroup"
+            android:label="@string/title_activity_search_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GroupChatProfile"
+            android:label="@string/title_activity_group_chat_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StrangersGroupProfile"
+            android:label="@string/title_activity_strangers_group_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Reputation"
+            android:label="@string/title_activity_reputation"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PostNotImage"
+            android:label="@string/title_activity_post_not_image"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

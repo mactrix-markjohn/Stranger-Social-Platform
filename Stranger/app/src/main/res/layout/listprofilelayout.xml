@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/postheader">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/poststrangerimage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/profileavatar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/poststrangerimage"
+            android:layout_centerVertical="true"
+            android:id="@+id/postname"
+            android:textColor="@color/f7black"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/humn"
+            android:textSize="14sp"
+            android:text="Larry Page"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/postmore"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:foreground="?selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/moresmall"/>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/postheader"
+        android:background="@drawable/line"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/postseperate"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/postmedia"
+        android:visibility="gone"
+        android:layout_below="@id/postseperate">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/postimage"
+            android:background="#f7000000"
+            android:visibility="gone"
+            android:src="@mipmap/original"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/postvideolay"
+            android:visibility="gone"
+            android:background="#f7000000"
+            >
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/postvideoview"
+                android:layout_centerInParent="true"/>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/f7black"
+                android:id="@+id/postvideothumnail"/>
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:indeterminate="true"
+                android:id="@+id/postvideoprogress"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:id="@+id/videocontrollay"
+                android:visibility="gone"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    card_view:cardCornerRadius="35dp"
+                    android:id="@+id/playpausecard"
+                    card_view:cardBackgroundColor="#77000000"
+                    card_view:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:id="@+id/postvideobutton"
+                        android:src="@drawable/play_button"/>
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/posttextlay"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/posttextback"
+                android:background="@mipmap/whitepaperback"
+                android:foreground="#00ffffff"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:id="@+id/posttext"
+                android:linksClickable="true"
+                android:autoLink="all"
+                android:background="@color/transperent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:fontFamily="@font/humn"
+                android:text="Hello people of Gotham, My name is Bruce Wayne.So many time i alwys wanted to be bad and live in the dark, to destroy anyone that comes in my way, to kill my enemies , to see them rot in hell. But My butler gave me a rule, which is to Never Kill, no matter happens and i have keeped to that since. it has not been easy for me. But now I have changed my name. I am now called mark John Chukwuemeka okparaeke  , I am now a Nigerian living in lagos. The place is good"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postmedia"
+        android:id="@+id/postextra"
+        android:layout_marginBottom="2dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/humn"
+            android:textSize="14sp"
+            android:linksClickable="true"
+            android:autoLink="all"
+            android:id="@+id/postcapture"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="Today was is a good one. I got all the work ddone and there is still more time to do other things. Wow I feel excited right now. Who is with me."
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textColor="#c0000000"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

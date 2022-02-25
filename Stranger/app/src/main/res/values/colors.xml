@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="darkorange">#da4e2101</color>
+    <color name="lessdarkorange">#e3dc7703</color>
+    <color name="darkpink">#da5c0121</color>
+    <color name="lessdarkpink">#b71651</color>
+    <color name="deeppink">#7C0B29</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="whitey">#a9ffffff</color>
+    <color name="grey">#9f000000</color>
+    <color name="rednew">#ff0f35</color>
+    <color name="opacrednew">#aaff0f35</color>
+    <color name="reding">#dc0030</color>
+    <color name="lightblue">#dd00aadd</color>
+    <color name="blue">#dd008cdd</color>
+    <color name="transblack">#ea000000</color>
+    <color name="transblue">#aa00ffff</color>
+    <color name="translightblack">#aa000000</color>
+    <color name="lightwhite">#77ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="lightred">#99ff0000</color>
+    <color name="appgreen">#1Db982</color>
+    <color name="blurtrans">#DD00aaFF</color>
+    <color name="f7black">#f4000000</color>
+    <color name="transperent">#00000000</color>
+    <color name="black25">#25000000</color>
+    <color name="dcblack">#dc000000</color>
+    <color name="appgreenex">#aa1DB982</color>
+    <color name="efblack">#ef000000</color>
+    <color name="orangeyellow">#FF9451</color>
+    <color name="oranging">#F7674F</color>
+    <color name="aawhite">#aaffffff</color>
+</resources>

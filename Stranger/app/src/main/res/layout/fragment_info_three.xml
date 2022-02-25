@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp">
+
+
+
+    <TextView
+        android:id="@+id/workstateentry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textSize="14sp"
+        android:paddingBottom="13dp"
+        android:layout_below="@+id/interestentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/workstate"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Working State: Student / Professional"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/professionentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/workstateentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/college"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Course/Profession:"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/instituteentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/professionentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/institute"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="College/ High School/ Place of Work"
+        android:paddingLeft="15dp" />
+
+    <!--Home address will be removed..../-->
+
+    <EditText
+        android:id="@+id/addressentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/instituteentry"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/homeicon"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Home Address"
+        android:paddingLeft="15dp" />
+
+
+    <!--Social Media Handles Endittext/-->
+
+    <TextView
+        android:id="@+id/socialmedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/addressentry"
+        android:fontFamily="@font/humn"
+        android:text="Your Social Media Handles"
+        android:textColor="#66000000"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/whatsappentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:inputType="phone"
+        android:layout_below="@+id/socialmedia"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/whatsapp"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Whatsapp Number: eg +2348145617816"
+        android:paddingLeft="15dp" />
+
+
+    <EditText
+        android:id="@+id/instagramentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/whatsappentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/instagram"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Instagram Handle"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/facebookentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/instagramentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/facebook"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Facebook Username"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/twitterentry"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/facebookentry"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/twitter"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Twitter Username"
+        android:paddingLeft="15dp" />
+
+
+    <Button
+        android:id="@+id/nextclick"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:foreground="?selectableItemBackground"
+        android:layout_below="@+id/twitterentry"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/orangecurverec"
+        android:fontFamily="@font/exo"
+        android:textStyle="bold"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

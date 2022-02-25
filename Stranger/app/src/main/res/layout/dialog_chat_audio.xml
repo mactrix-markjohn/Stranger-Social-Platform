@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/requestbelowlay"
+                android:layout_alignParentBottom="true">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/sepee"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardElevation="2dp"
+                    android:id="@+id/leftclick"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="#f0f0f0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:drawableLeft="@drawable/folder"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/humn"
+                        android:text="Add File"/>
+
+
+                </android.support.v7.widget.CardView>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/sepee"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/sepee"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/rightclick"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="#00aaff"
+                    app:cardElevation="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/sendwhite"
+                        android:fontFamily="@font/humn"
+                        android:text="Send"/>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_above="@+id/requestbelowlay"
+                android:id="@+id/requestdescibe">
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/chatimage"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="#f0f0f0"
+                    app:cardElevation="2dp"
+                    android:layout_marginLeft="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="center"
+                            android:id="@+id/headset"
+                            android:src="@drawable/music_headset"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:id="@+id/chataudioname"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/playpausecard"
+                            android:layout_toRightOf="@+id/headset"
+                            android:text="James Arthur - Can I be Him.mp3"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/playpausecard"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/play_button_sm_black"/>
+
+
+                    </RelativeLayout>
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/chatspace"
+                    android:layout_alignParentBottom="true"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardElevation="2dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/chatsend"
+                        android:layout_toRightOf="@+id/chatfile"
+                        app:cardBackgroundColor="#f0f0f0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:background="@color/transperent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:scrollbars="vertical"
+                            android:id="@+id/chattype"
+                            android:textSize="16sp"
+                            android:textColor="#aa000000"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/humn"
+                            android:hint="Type a Message"
+                            android:textColorHint="#88000000" />
+
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/requestdescibe"
+                android:id="@+id/requestheader">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="center"
+                    android:foreground="?selectableItemBackground"
+                    android:id="@+id/requestcancel"
+                    android:src="@drawable/cancel"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:scaleType="center"
+                    android:foreground="?selectableItemBackground"
+                    android:src="@drawable/featherpenblackwhite"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/humn"
+                    android:textColor="#000000"
+                    android:drawableLeft="@drawable/chat_bubbleblack"
+                    android:drawablePadding="10dp"
+                    android:textSize="16sp"
+                    android:text="Chat Media"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

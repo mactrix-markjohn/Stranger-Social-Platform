@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/friendcount"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/humn"
+        android:text="0"
+        android:textColor="#66000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/friendcounttext"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/friendcount"
+        android:layout_marginLeft="5dp"
+        android:textColor="#66000000"
+        android:textSize="15sp"
+        android:fontFamily="@font/humn"
+        android:text="Strangers"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friendcount"
+        android:layout_marginTop="10dp"
+        android:id="@+id/friendslistview"
+        android:divider="@drawable/line"/>
+
+
+</RelativeLayout>

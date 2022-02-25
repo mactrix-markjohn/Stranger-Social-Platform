@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StrangerLetter">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/simpleline"
+            android:id="@+id/letterbackimage"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/bell">
+
+            <android.support.v7.widget.CardView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:cardBackgroundColor="#44ffffff"
+                app:cardCornerRadius="10dp"
+                app:contentPaddingRight="5dp"
+                app:contentPaddingLeft="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000000"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp"
+                    android:text="Stranger Letter"
+                    android:fontFamily="@font/kaushanscriptregular" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/ba"
+                android:onClick="back"
+                app:cardBackgroundColor="#44ffffff"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:foreground="?selectableItemBackground"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/backblack" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ba"
+                android:onClick="changepaper"
+                app:cardBackgroundColor="#44ffffff"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/openpaper" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:cardBackgroundColor="#44ffffff"
+                android:layout_centerVertical="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="cancel"
+                android:id="@+id/cancelletter"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentRight="true"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cancel" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toStartOf="@+id/cancelletter"
+                android:layout_toLeftOf="@+id/cancelletter"
+                android:foreground="?selectableItemBackground"
+                android:onClick="font"
+                app:cardBackgroundColor="#44ffffff"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/font" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bell"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/stylelayout"
+            android:layout_above="@+id/ger">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/cicle"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/centerdot" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/centerdot"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/centerdot"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/stylelayouty"
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/ger">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/cicle"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/centerdoty" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/centerdoty"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/centerdoty"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"/>
+
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/kaushanscriptregular"
+            android:layout_below="@+id/stylelayout"
+            android:layout_above="@+id/stylelayouty"
+            android:background="@color/transperent"
+            android:layout_marginRight="55dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="55dp"
+            android:id="@+id/letterpaper"
+            android:textColor="#dd000000"
+            android:textSize="16sp"
+            android:textColorHint="#dd000000"
+            android:scrollbars="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:hint="Hello Stranger,\n\nWrite You Letter here and select features of the person/persions you want this letter to be sent to. You may be surprised at the outcome of this action, you can meet a Project Partner from here, you can meet a Life time friend here, you can also meet your soul mate. The power is in your Hand, So Explore!!.\n\nThank you"
+            android:paddingTop="20dp"
+            android:gravity="start"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_above="@+id/stylelayouty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="send"
+            android:foreground="?selectableItemBackground"
+            card_view:cardCornerRadius="25dp"
+            card_view:cardElevation="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/send_paper_plane"
+                android:scaleType="center"/>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <!--include layout="@layout/content_interest_realm" /-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EPADViewer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00aaff"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dd000000"/>
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                android:onClick="back"
+                android:layout_centerVertical="true"
+                android:id="@+id/epback"
+                android:src="@drawable/backarrow"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/epback"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/original"
+                android:onClick="epprofile"
+                android:id="@+id/epviewimage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/epviewimage"
+                android:layout_toLeftOf="@+id/createep"
+                android:maxLines="1"
+                android:layout_marginRight="3dp"
+                android:onClick="epprofile"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/epviewname"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/humn"
+                android:text="Mark John Chukwuemeka Okparaeke"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textSize="13sp"
+                android:onClick="createEPAD"
+                android:id="@+id/createep"
+                android:textColor="#dd00aaff"
+                android:fontFamily="@font/humn"
+                android:text="Create Yout EP Ad"/>
+
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/more"
+                android:onClick="download"
+                android:scaleType="center"
+                android:src="@drawable/more_horiz_blue"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/epvmedia"
+                android:layout_below="@+id/more">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="#f2000000"
+                    android:id="@+id/epimage"
+                    android:visibility="gone"
+                    android:src="@mipmap/original"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/eppostvideolay"
+                    android:onClick="epvideolay"
+                    android:visibility="gone"
+                    android:background="#f7000000"
+                    >
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/postvideoview"
+                        android:layout_centerInParent="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#66000000"
+                        android:visibility="visible"
+                        android:id="@+id/epvideocontroller">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/humn"
+                            android:textSize="13sp"
+                            android:id="@+id/videotitle"/>
+
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true"
+                            card_view:cardCornerRadius="35dp"
+                            card_view:cardBackgroundColor="#77ffffff"
+                            card_view:cardElevation="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:onClick="videobutton"
+                                android:id="@+id/postvideobutton"
+                                android:src="@drawable/play_button_sm_black"/>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/comment"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/epaudiocard"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/blurtrans"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="center"
+                            android:id="@+id/headset"
+                            android:src="@drawable/music_headset_white"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:id="@+id/epaudioname"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/playpausecard"
+                            android:layout_toRightOf="@+id/headset"
+                            android:text="James Arthur - Can I be Him.mp3"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/playpausecard"
+                            android:onClick="playpause"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/play_button_sm"/>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/comment"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="5dp"
+                    android:id="@+id/epfilecard"
+                    app:cardBackgroundColor="@color/blurtrans"
+                    android:visibility="gone"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="center"
+                            android:id="@+id/folder"
+                            android:src="@drawable/folder_white"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:id="@+id/epfilename"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/downloadfile"
+                            android:layout_toRightOf="@+id/folder"
+                            android:text="Android-How to Develop.pdf"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/downloadfile"
+                            android:onClick="download"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/download_white"/>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/epadetail"
+                android:layout_below="@+id/epvmedia"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:textColor="#cc00aaff"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right"
+                        android:padding="3dp"
+                        android:textSize="13sp"
+                        android:text="Title:"/>
+
+                    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginRight="5dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#aa000000">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#ffffff"
+                            android:linksClickable="true"
+                            android:autoLink="all"
+                            android:id="@+id/eptitle"
+                            android:padding="6dp"
+                            android:textSize="15sp" />
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#cc00aaff"
+                        android:textSize="13sp"
+                        android:text="Message:"/>
+                    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginRight="5dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#aa000000">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#ffffff"
+                            android:linksClickable="true"
+                            android:autoLink="all"
+                            android:id="@+id/epmessage"
+                            android:padding="6dp"
+                            android:textSize="15sp"/>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#cc00aaff"
+                        android:textSize="13sp"
+                        android:text="Venue:"/>
+                    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginRight="5dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#aa000000">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#ffffff"
+                            android:id="@+id/epadvenue"
+                            android:linksClickable="true"
+                            android:autoLink="all"
+                            android:padding="6dp"
+                            android:textSize="15sp"/>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/analysislay"
+                android:layout_below="@+id/epadetail"
+                android:layout_marginTop="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/analysis"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/humn"
+                    android:text="Analysis"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/analysis"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/numberviewers"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#dd00aaff"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/humn"
+                            android:text="Number of Viewer" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/numberviewers"
+                            android:textColor="@color/blurtrans"
+                            android:id="@+id/viewers"
+                            android:layout_marginTop="10dp"
+                            android:textSize="80sp"
+                            android:gravity="center"
+                            android:fontFamily="@font/caviardreams"
+                            android:textStyle="bold"
+                            android:text="3,545,324,500" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/viewers"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/blurtrans"
+                            android:textSize="20sp"
+                            android:text="viewers"
+                            android:fontFamily="@font/humn" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--Stranger's Region of Origin-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/regions"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#dd00aaff"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/humn"
+                            android:text="Regions" />
+
+                        <ListView android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/regionlist"
+                            android:layout_below="@+id/regions"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                       <!-- Strangers Profession-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/professions"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#dd00aaff"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/humn"
+                            android:text="Professions" />
+
+                        <ListView android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/professionlist"
+                            android:layout_below="@+id/professions"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                       <!-- Strangers workstate :  Student or Proffessional-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workstates"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#dd00aaff"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/humn"
+                            android:text="Work State" />
+
+                        <ListView android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/workstatelist"
+                            android:layout_below="@+id/workstates"/>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!-- <include layout="@layout/content_epadviewer" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

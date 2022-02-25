@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#ffffff"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/requestdescibe">
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chatimage"
+                    app:cardElevation="5dp">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+                        android:background="#00000000"
+                        android:id="@+id/requestheader">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:foreground="?selectableItemBackground"
+                            android:id="@+id/cancel"
+                            android:src="@drawable/cancel"/>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone"
+                            android:scaleType="center"
+                            android:foreground="?selectableItemBackground"
+                            android:src="@drawable/featherpenblackwhite"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#000000"
+                            android:drawableLeft="@drawable/searchicon"
+                            android:drawablePadding="10dp"
+                            android:textSize="16sp"
+                            android:text="Search Member"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/chatimage"
+                    android:id="@+id/searchfieldcard"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#efefef"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="25dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/searchfield"
+                            android:layout_toLeftOf="@+id/search"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/humn"
+                            android:paddingLeft="15dp"
+                            android:hint="Search name"
+                            android:background="@color/transperent"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/searchiconblue"
+                            android:id="@+id/search"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"/>
+
+                    </RelativeLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/searchfieldcard"
+                    android:id="@+id/searchcountlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:textColor="@color/blurtrans"
+                        android:textSize="13sp"
+                        android:id="@+id/searchcount"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:textColor="@color/blurtrans"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Search Result"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="5dp"
+                    android:layout_below="@+id/searchcountlay"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/groupaddlist"
+                    android:divider="@color/transperent"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

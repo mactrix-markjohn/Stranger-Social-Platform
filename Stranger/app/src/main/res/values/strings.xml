@@ -1,0 +1,239 @@
+<resources>
+    <string name="app_name">Stranger</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_introduction">Introduction</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_user_info">UserInfo</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_strange_room">StrangeRoom</string>
+    <string name="title_activity_interest_realm">InterestRealm</string>
+    <string name="title_activity_search_region">SearchRegion</string>
+    <string name="title_activity_basic_page">BasicPage</string>
+    <string name="strangertheme">Make People close to you closer to you...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_stranger_profile">StrangerProfile</string>
+    <string name="title_activity_notification_board">NotificationBoard</string>
+    <string name="title_activity_new_stranger_post">NewStrangerPost</string>
+    <string name="title_activity_new_epads">NewEPAds</string>
+
+
+    <!-- TODO: Here the name of the Database Node are store/-->
+    <string name="admin">admin</string>
+    <string name="adminemail">strangermactrix@gmail.com</string>
+    <string name="user">User</string>
+    <string name="post">Post</string>
+    <string name="chat">Chat</string>
+    <string name="emailpass">EmailPass</string>
+    <string name="passpref">PassPref</string>
+    <string name="emailpref">EmailPref</string>
+    <string name="userid">userid</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+    <string name="photoUrl">photoUrl</string>
+    <string name="fullname">fullname</string>
+    <string name="phonenumber">phonenumber</string>
+    <string name="databirth">databirth</string>
+    <string name="gender">gender</string>
+    <string name="status">status</string>
+    <string name="interest">interest</string>
+    <string name="profession">profession</string>
+    <string name="institute">institute</string>
+    <string name="address">address</string>
+    <string name="whatsapp">whatsapp</string>
+    <string name="instagram">instagram</string>
+    <string name="facebook">facebook</string>
+    <string name="twitter">twitter</string>
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="engaged">Engaged</string>
+    <string name="notinterest">Not Interest</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="lastseen">lastseen</string>
+    <string name="connectionstatus">connectionstatus</string>
+    <string name="online">online</string>
+    <string name="last_seen">last seen</string>
+    <string name="location">location</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+
+    <!--Type of Post Media/-->
+    <string name="video">video</string>
+    <string name="image">image</string>
+    <string name="text">text</string>
+    <string name="none">none</string>
+    <string name="videothumbnail">videothumbnail</string>
+
+    <!--Stranger Profile bundle key/-->
+    <string name="strangerid">strangerid</string>
+    <string name="nameofactivity">nameofactivity</string>
+    <string name="strangeract">strangeract</string>
+    <string name="searchact">searchact</string>
+    <string name="unstranger">Unstranger</string>
+    <string name="unstrangered">Unstrangered</string>
+    <string name="strangers">Strangers</string>
+    <string name="friends">Friends</string>
+
+    <!--Type of text background/-->
+    <string name="whiteback">whiteback</string>
+    <string name="vintageback">vintageback</string>
+
+
+    <!--String to initialize the SharedPref/-->
+    <string name="keeplogin">keeplogin</string>
+    <string name="loginonceclick">loginonceclick</string>
+    <string name="introonce">introonce</string>
+
+
+    <!--String value for the Chatting Spot/-->
+    <string name="message">message</string>
+    <string name="chatid">chatid</string>
+    <string name="date">date</string>
+    <string name="fileuri">fileuri</string>
+    <string name="filetype">filetype</string>
+    <string name="senderid">semderid</string>
+    <string name="receiverid">receiverid</string>
+    <string name="chatstatus">chatstatus</string>
+    <string name="chatfiletype">chatfiletype</string>
+    <string name="videofiletype">videofiletype</string>
+    <string name="audiofiletype">audiofiletype</string>
+    <string name="imagefiletype">imagefiletype</string>
+    <string name="otherfiletype">otherfiletype</string>
+    <string name="title_activity_stranger_listing">StrangerListing</string>
+    <string name="onlinetime">onlinetime</string>
+    <string name="logincount">logincount</string>
+    <string name="seen">seen</string>
+    <string name="delivered">delivered</string>
+    <string name="sent">sent</string>
+    <string name="student">Student</string>
+    <string name="professional">Professional</string>
+
+    <!--Find Stranger string resources-->
+    <string name="searchtype">searchtype</string>
+    <string name="narrowdown">narrowdown</string>
+    <string name="wildsearch">wildsearch</string>
+    <string name="alllocation">All Location</string>
+    <string name="particularlocation">Particular Location</string>
+    <string name="currentaddress">currentaddress</string>
+
+
+    <!--Notification Board String-->
+    <string name="request">request</string>
+    <string name="letter">Letter</string>
+    <string name="epads">EPAds</string>
+    <string name="requestreceived">requestreceived</string>
+    <string name="requestaccepted">requestaccepted</string>
+    <string name="requestrejected">requestrejected</string>
+    <string name="requestreceiverseen">requestreceiverseen</string>
+    <string name="requestsenderseen">requestsenderseen</string>
+    <string name="permission">permission</string>
+    <string name="permissiondenied">permissiondenied</string>
+    <string name="permissiongranted">permissiongranted</string>
+    <string name="postclick">postclick</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="replytype">replytype</string>
+    <string name="replymessage">replymessage</string>
+    <string name="origin">origin</string>
+    <string name="country">country</string>
+    <string name="datebirth">datebirth</string>
+    <string name="workstate">workstate</string>
+    <string name="headerphotourl">headerphotourl</string>
+    <string name="nobline">nobline</string>
+    <string name="flowerline">flowerline</string>
+    <string name="curveline">curveline</string>
+    <string name="curyline">curyline</string>
+    <string name="fancyline">fancyline</string>
+    <string name="lambline">lambline</string>
+    <string name="maturepaper">maturepaper</string>
+    <string name="oldpaper">oldpaper</string>
+    <string name="ovalline">ovalline</string>
+    <string name="pinkbold">pinkbold</string>
+    <string name="pinkwhite">pinkwhite</string>
+    <string name="roseline">roseline</string>
+    <string name="simpleline">simpleline</string>
+    <string name="xmasred">xmasred</string>
+    <string name="xmastree">xmastree</string>
+    <string name="letterpaper">letterpaper</string>
+    <string name="alluraregular">alluraregular</string>
+    <string name="bernfash">bernfash</string>
+    <string name="caviardreams">caviardreams</string>
+    <string name="dancingscriptregular">dancingscriptregular</string>
+    <string name="e11viva">e11viva</string>
+    <string name="humn">humn</string>
+    <string name="kabeln">kabeln</string>
+    <string name="kaushanscriptregular">kaushanscriptregular</string>
+    <string name="ralewayregular">ralewayregular</string>
+    <string name="stacc222">stacc222</string>
+    <string name="typoupri">typoupri</string>
+    <string name="windsong">windsong</string>
+    <string name="e111viva">e111viva</string>
+    <string name="abstractstar">abstractstar</string>
+    <string name="blueletter">blueletter</string>
+    <string name="flowerpaper">flowerpaper</string>
+    <string name="flowerup">flowerup</string>
+    <string name="lineborder">lineborder</string>
+    <string name="paperpink">paperpink</string>
+    <string name="pinklove">pinklove</string>
+    <string name="puperlittle">purplelittle</string>
+    <string name="purplefly">purplefly</string>
+    <string name="roseborder">roseborder</string>
+    <string name="rosepaper">rosepaper</string>
+    <string name="whiterose">whiterose</string>
+    <string name="wineline">wineline</string>
+    <string name="roseframe">roseframe</string>
+    <string name="lithogrl">lithogrl</string>
+    <string name="ozhandrm">ozhandrm</string>
+    <string name="aroundme">aroundme</string>
+    <string name="commenttext">commenttext</string>
+    <string name="commentimage">commentimage</string>
+    <string name="commentvideo">commentvideo</string>
+    <string name="commentaudio">commentaudio</string>
+    <string name="commentfile">commentfile</string>
+    <string name="comment">comment</string>
+    <string name="broadcastactivity">broadcastactivity</string>
+    <string name="addfile">addfile</string>
+    <string name="showcomment">showcomment</string>
+    <string name="likecount">likecount</string>
+    <string name="like">like</string>
+    <string name="likewave">likewave</string>
+    <string name="deletelist">deletelist</string>
+    <string name="title_activity_stranger_letter_viewer">StrangerLetterViewer</string>
+    <string name="noticestart">noticestart</string>
+    <string name="noticereceive">noticereceive</string>
+    <string name="noticearraylist">noticearraylist</string>
+    <string name="interestuser">interestuser</string>
+    <string name="deleted">deleted</string>
+    <string name="audio">audio</string>
+    <string name="title_activity_epadviewer">EPADViewer</string>
+    <string name="epadsitem">epadsitem</string>
+    <string name="title_activity_strangers_group">StrangersGroup</string>
+    <string name="title_activity_group_chat">GroupChat</string>
+    <string name="strangersgroup">strangersgroup</string>
+    <string name="group">group</string>
+    <string name="members">members</string>
+    <string name="title_activity_search_group">SearchGroup</string>
+    <string name="title_activity_group_chat_profile">GroupChatProfile</string>
+    <string name="title_activity_strangers_group_profile">StrangersGroupProfile</string>
+    <string name="title_activity_reputation">Reputation</string>
+    <string name="publicaccess">Public</string>
+    <string name="privateaccess">Private</string>
+    <string name="name">name</string>
+    <string name="description">description</string>
+    <string name="access">access</string>
+    <string name="imageurl">imageurl</string>
+    <string name="views">views</string>
+    <string name="title_activity_post_not_image">PostNotImage</string>
+    <string name="interestreference">InterestReference</string>
+    <string name="infopager">infopager</string>
+    <string name="infoPosition">infoPosition</string>
+
+
+</resources>

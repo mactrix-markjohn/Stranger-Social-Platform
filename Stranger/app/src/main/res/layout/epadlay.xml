@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:foreground="?selectableItemBackground"
+    android:layout_marginBottom="5dp"
+    >
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toLeftOf="@+id/epcardsign"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/epadtitle"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:maxLength="27"
+                android:textColor="#ee000000"
+                android:textStyle="bold"
+                android:text="NFCS Week" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/epadate"
+                android:layout_toRightOf="@+id/epadtitle"
+                android:layout_alignBaseline="@+id/epadtitle"
+                android:fontFamily="@font/humn"
+                android:layout_marginLeft="5dp"
+                android:textSize="10sp"
+                android:maxLines="1"
+                android:textColor="#88000000"
+                android:text="11:20 PM  Sat 20 May, 2019" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/epadmessage"
+                android:fontFamily="@font/humn"
+                android:layout_below="@+id/epadtitle"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:textColor="#dd00aaff"
+                android:text="We are inviting you to this year NFCS week, it is going to be a great one. So we expect you to come" />
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/epadmessage"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/maper"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/map_marker_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/epadaddress"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/maper"
+                    android:maxLines="2"
+                    android:fontFamily="@font/humn"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#99000000"
+                    android:text="St Paul II Hall, Seat of Wisdom, Catholic Church" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#eeeeee"
+        android:id="@+id/epcardsign"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:id="@+id/epadsign"
+            android:src="@drawable/adselectro_blue"/>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

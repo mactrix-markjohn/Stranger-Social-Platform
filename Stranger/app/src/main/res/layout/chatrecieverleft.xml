@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginRight="50dp">
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:elevation="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bluecurveleft"
+            android:id="@+id/chatinfo">
+
+            <TextView
+                android:id="@+id/chattime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/chatstatus"
+                android:fontFamily="@font/humn"
+                android:text="5:45PM"
+                android:textColor="#99000000"
+                android:textSize="9sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chatstatus"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="9sp"
+                android:fontFamily="@font/humn"
+                android:textColor="#99000000"
+                android:text="delivered"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:linksClickable="true"
+                android:saveEnabled="true"
+                android:autoLink="all"
+                android:id="@+id/chatmessage"
+                android:paddingRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff000000"
+                android:textSize="15sp"
+                android:layout_below="@+id/chattime"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"/>
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

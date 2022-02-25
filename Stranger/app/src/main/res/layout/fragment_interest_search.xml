@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interestinputinstruct"
+        android:fontFamily="@font/humn"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#dd00aaff"
+        android:text="Please note, the Strangers found are Strangers that are around you. "
+        android:layout_marginLeft="20dp"/>
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:id="@+id/interestcard"
+        android:layout_below="@+id/interestinputinstruct"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        card_view:cardCornerRadius="22dp"
+        card_view:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:elevation="10dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/humn"
+                android:layout_toLeftOf="@+id/interestsearchbotton"
+                android:drawableLeft="@drawable/searchicon"
+                android:background="@color/transperent"
+                android:paddingLeft="20dp"
+                android:hint="Enter Interest: eg Java etc"
+                android:drawablePadding="10dp"
+                android:id="@+id/interestsearchentry"
+                />
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/interestsearchbotton"
+                android:background="@color/blurtrans">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/humn"
+                    android:text="Search"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/interestcard"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:id="@+id/searchbuttonlayout">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/interestemptylayout">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/noresult"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/newspaper"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/noresult"
+                android:fontFamily="@font/humn"
+                android:layout_centerInParent="true"
+                android:textColor="#44000000"
+                android:text="No Result. Search for an Interest."/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/interstresultlayout"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/interestsearchresult">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/humn"
+                        android:text="Search Result:"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/interstresultcount"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/blurtrans"
+                        android:fontFamily="@font/humn"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/line"
+                android:id="@+id/interestsearchlist"
+                android:layout_below="@+id/interestsearchresult"/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progresslay"
+        android:elevation="25dp"
+        android:visibility="gone"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#33000000">
+
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:indeterminateBehavior="cycle"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:fadingEdge="horizontal"
+            />
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:indeterminateBehavior="cycle"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="10dp"
+            android:rotation="180"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

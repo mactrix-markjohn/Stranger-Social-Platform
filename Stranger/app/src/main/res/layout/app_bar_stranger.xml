@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stranger">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:src="@drawable/menu"
+                android:foreground="?selectableItemBackground"
+                android:onClick="navigate"
+                android:layout_centerVertical="true"
+                android:scaleType="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kaushanscriptregular"
+                android:textColor="#cc000000"
+                android:text="Stranger"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:onClick="strangerlist"
+                android:id="@+id/st"
+                android:visibility="gone"
+                android:foreground="?selectableItemBackground"
+                android:layout_toLeftOf="@+id/moreme"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:src="@drawable/groupicon"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:onClick="findstranger"
+                android:foreground="?selectableItemBackground"
+                android:layout_toLeftOf="@+id/st"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:src="@drawable/add_stranger"/>
+
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:onClick="more"
+                android:id="@+id/moreme"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:foreground="?selectableItemBackground"
+                android:src="@drawable/moresmalla"/>
+
+
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/demarcate"
+            android:visibility="gone"
+            android:background="@drawable/line"/>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/strangepager"
+            android:layout_below="@+id/demarcate"
+            android:layout_above="@+id/strangedemarcate"
+            />
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/line"
+           android:id="@+id/strangedemarcate"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginBottom="1dp"
+           android:layout_above="@+id/strangetab"/>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/strangetab"
+            app:tabSelectedTextColor="@color/blurtrans"
+            app:tabTextColor="#77000000"
+            android:layout_alignParentBottom="true"
+            app:tabIndicatorColor="@color/blurtrans"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="1dp"
+            android:layout_marginBottom="2dp">
+
+
+        </android.support.design.widget.TabLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <!--include layout="@layout/content_stranger" /-->
+
+    <!--RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3c3c3c"
+        xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <com.mactrixapp.www.stranger.myCustomView
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_centerInParent="true"
+            custom:circleColor="#ffffff"
+            custom:labelColor="#000000"
+            custom:circleLabel="Hello"/>
+
+
+    </RelativeLayout-->
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

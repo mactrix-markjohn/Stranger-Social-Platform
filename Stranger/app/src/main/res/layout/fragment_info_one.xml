@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/infocard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/humn"
+            android:text="Please fill up all the Entry provided below."
+            android:textColor="#66000000"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/fullnameentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/instruction"
+            android:layout_marginTop="10dp"
+            android:maxLength="35"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/personstroke"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="Fullname"
+            android:paddingLeft="15dp" />
+
+
+        <EditText
+            android:id="@+id/phoneentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/fullnameentry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="Phone Number:eg +2348147616916"
+            android:inputType="phone"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:id="@+id/birthentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/phoneentry"
+            android:gravity="center|start"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/date"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="Date of Birth: eg 26/04/1999"
+            android:paddingLeft="15dp" />
+        <TextView
+            android:id="@+id/genderentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:textSize="14sp"
+            android:layout_below="@+id/birthentry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/gender"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="Gender: Male or Female"
+            android:paddingLeft="15dp" />
+        <EditText
+            android:id="@+id/originentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:textSize="14sp"
+            android:layout_below="@+id/genderentry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/country"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="State of Origin: eg Anambra or Lagos state"
+            android:paddingLeft="15dp" />
+
+        <EditText
+            android:id="@+id/countryentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:textSize="14sp"
+            android:layout_below="@+id/originentry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/flag"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/humn"
+            android:hint="Country; eg Nigeria or France"
+            android:paddingLeft="15dp" />
+
+
+        <!--The Marrital entry will be removed..../-->
+
+        <TextView
+            android:id="@+id/marritalentry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/countryentry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/orangecontain"
+            android:drawableLeft="@drawable/marrital"
+            android:visibility="gone"
+            android:drawablePadding="5dp"
+            android:gravity="center|start"
+            android:fontFamily="@font/humn"
+            android:hint="Status:Married or Single or Not Interested"
+            android:paddingLeft="15dp" />
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/countryentry"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="25dp"
+            android:id="@+id/next"
+            app:cardBackgroundColor="#00aaff"
+            app:cardElevation="2dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/exo"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Next"/>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+    <TextView
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rank"
+        android:textColor="#aa000000"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:text="106758949949"
+        android:textSize="12sp"
+        android:maxLines="1"/>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+       android:background="#44000000"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/rank"
+        android:id="@+id/lined"/>
+
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/lined"
+        android:layout_toLeftOf="@+id/linedd"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/photo"
+            android:src="@mipmap/profileavatar" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details"
+            android:layout_toRightOf="@+id/photo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:text="Mark John Chukwuemeka Okparaeke"
+                android:fontFamily="@font/humn"
+                android:layout_alignParentLeft="true"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:textColor="#bb000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:fontFamily="@font/humn"
+                android:textSize="10sp"
+                android:text="markjohn"
+                android:layout_below="@+id/name"
+                android:textColor="#66000000"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="1dp"
+                android:maxLines="1" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:layout_toLeftOf="@+id/followers"
+        android:id="@+id/linedd"/>
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/followers"
+        android:layout_alignParentRight="true"
+        android:textColor="#00aaff"
+        android:gravity="center"
+        android:paddingRight="2dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:maxLines="1"
+        android:text="106758949949"
+        android:textSize="12sp"/>
+
+
+
+
+
+</RelativeLayout>

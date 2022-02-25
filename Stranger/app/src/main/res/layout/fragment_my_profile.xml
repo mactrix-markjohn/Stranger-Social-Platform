@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        card_view:contentPadding="5dp"
+        android:id="@+id/profilecard"
+        card_view:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/profilecenter">
+
+
+                <RelativeLayout
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:id="@+id/profileimagee"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:src="@mipmap/profileavatar"
+                        card_view:civ_border_width="1dp"
+                        android:id="@+id/profileimage"
+                        card_view:civ_border_color="#11000000" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/editphoto"
+                        android:layout_alignParentBottom="true"
+                        android:backgroundTint="#00aaff"
+                        android:background="@drawable/orangercircle"
+                        android:scaleType="center"
+                        android:src="@drawable/photo_camera" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/profileusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileimagee"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/humn"
+                    android:text="Mark_John"
+                    android:textColor="#ee000000"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileusername"
+                    android:id="@+id/profilefullname"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/humn"
+                    android:textSize="10sp"
+                    android:textColor="#77000000"
+                    android:text="Mark John Chukwuemeka Okparaeke"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/profilefullname"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/profileeditcard"
+                    android:layout_centerHorizontal="true"
+                    card_view:cardElevation="5dp"
+                    android:clickable="true"
+                    card_view:cardBackgroundColor="@color/blurtrans"
+                    android:foreground="?selectableItemBackground"
+                    card_view:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="Edit Profile"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/humn"/>
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:id="@+id/profilecenter"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/profilecenter">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linechangable"
+                    android:backgroundTint="#33000000"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linechangable"
+                    android:backgroundTint="#33000000"
+                    android:id="@+id/profilebottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/strangerprofessionalinfo">
+
+
+                    <!--This attribute hold the Professional Info-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:id="@+id/strangerprofessional">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Computer Science Student"
+                            android:maxLength="28"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:id="@+id/profieprofession"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="at"
+                            android:id="@+id/at"
+                            android:layout_toRightOf="@+id/profieprofession"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLength="26"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:text="University of Ibadan"
+                            android:id="@+id/profileinstitute"
+                            android:layout_below="@id/profieprofession"
+                            android:textSize="13sp"/>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="from"
+                            android:id="@+id/from"
+                            android:layout_below="@id/profieprofession"
+                            android:layout_toRightOf="@+id/profileinstitute"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/humn"
+                            android:text="Lagos"
+                            android:id="@+id/origin"
+                            android:layout_below="@id/profileinstitute"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:id="@+id/country"
+                            android:text="Nigeria"
+                            android:layout_below="@id/profileinstitute"
+                            android:layout_toRightOf="@+id/origin"
+                            android:textSize="13sp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/humn"
+                            android:text="and"
+                            android:id="@+id/and"
+                            android:layout_below="@id/origin"
+                            android:textSize="13sp"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="currently"
+                            android:id="@+id/currently"
+                            android:layout_below="@id/origin"
+                            android:layout_toRightOf="@+id/and"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:id="@+id/profilemarrital"
+                            android:text="Single"
+                            android:layout_below="@id/origin"
+                            android:layout_toRightOf="@+id/currently"
+                            android:textSize="13sp"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/strangerstudent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Student"
+                            android:maxLength="28"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:id="@+id/student"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="of"
+                            android:id="@+id/of"
+                            android:layout_toRightOf="@+id/student"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:maxLines="1"
+                            android:text="Computer Science"
+                            android:id="@+id/profileprofessions"
+                            android:layout_toRightOf="@+id/of"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:text="at"
+                            android:layout_marginTop="2dp"
+                            android:layout_below="@+id/student"
+                            android:id="@+id/ats"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:maxLength="26"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:text="University of Ibadan"
+                            android:layout_toRightOf="@+id/ats"
+                            android:id="@+id/profileinstitudes"
+                            android:layout_below="@id/student"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:maxLength="26"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:text="from"
+                            android:layout_toRightOf="@+id/profileinstitudes"
+                            android:id="@+id/froms"
+                            android:layout_below="@id/student"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/humn"
+                            android:text="Lagos"
+                            android:id="@+id/origins"
+                            android:layout_below="@id/ats"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="Nigeria"
+                            android:id="@+id/countrys"
+                            android:layout_below="@+id/ats"
+                            android:layout_toRightOf="@+id/origins"
+                            android:textSize="12sp"/>
+
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/humn"
+                            android:text="and"
+                            android:id="@+id/ands"
+                            android:layout_below="@id/origins"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:fontFamily="@font/humn"
+                            android:text="currently"
+                            android:id="@+id/currentlys"
+                            android:layout_below="@+id/origins"
+                            android:layout_toRightOf="@+id/ands"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/humn"
+                            android:id="@+id/profilemarritals"
+                            android:text="Single"
+                            android:layout_below="@id/origins"
+                            android:layout_toRightOf="@+id/currentlys"
+                            android:textSize="12sp"/>
+
+
+                    </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/humn"
+                    android:text="Interest:"
+                    android:textColor="@color/blurtrans"
+                    android:id="@+id/interest"
+                    android:layout_below="@+id/strangerprofessionalinfo"
+                    android:textSize="14sp"/>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interest"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/profileinterestlist"
+                    android:divider="#00000000"
+                    android:layout_above="@+id/profilebottom"
+                    android:layout_marginBottom="5dp"/>
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profilecard">
+
+        <android.support.design.widget.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/profilebottomview"
+            card_view:menu="@menu/profilebottomnavigate"
+            android:paddingTop="10dp"
+           card_view:itemIconTint="@drawable/orangeselect"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/profilebottomview"
+            android:background="@drawable/linechangable"
+            android:backgroundTint="#33000000"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/profilepostcenter"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postcount"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="13sp"
+            android:fontFamily="@font/humn"
+            android:textColor="#88000000"
+            android:text="Posts: "
+            android:layout_below="@+id/profilepostcenter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postcountnum"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/postcount"
+            android:layout_below="@+id/profilepostcenter"
+            android:textSize="13sp"
+            android:textColor="#88000000"
+            android:fontFamily="@font/humn"
+            android:text="0"/>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/postcount"
+            android:layout_marginTop="1dp"
+            android:id="@+id/profilepostgrid"
+            android:stretchMode="columnWidth"
+            android:numColumns="3"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="1dp"
+            android:columnWidth="10dp" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profilepostlist"
+            android:layout_below="@+id/postcount"
+            android:layout_marginTop="1dp"
+            android:divider="@drawable/line"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+   <!-- </ScrollView>-->
+
+    <include layout="@layout/bottomsheet_my_profile"/>
+    <include layout="@layout/bottomsheet_comment_lay"/>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

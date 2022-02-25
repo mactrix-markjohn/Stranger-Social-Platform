@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/socialmediaaccount"
+        android:orderInCategory="100"
+        android:title="Social Media Accounts"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/requestlocation"
+        android:orderInCategory="100"
+        android:title="Request Current Location"
+        app:showAsAction="never" />
+</menu>

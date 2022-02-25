@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp" android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:id="@+id/postmedia"
+        android:visibility="visible"
+        android:layout_below="@id/postseperate">
+
+
+        <android.support.v7.widget.CardView android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/postimage"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/letterimage"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postimage"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/lettertitle"
+            android:text="FlowerLine"
+            android:textStyle="bold"
+            android:fontFamily="@font/kaushanscriptregular"
+            android:textColor="#99000000"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

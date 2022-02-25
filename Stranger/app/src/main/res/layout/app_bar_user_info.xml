@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInfo">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="gone">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--include layout="@layout/content_user_info" /-->
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/photocard"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                card_view:cardElevation="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="175dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/userheaderimage"
+                            android:src="@mipmap/strangeralone"
+                            android:contentDescription="HeaderImage" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#39000000"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/headerimagegradient"/>
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:onClick="editheaderimage"
+                            android:background="#00000000"
+                            android:src="@drawable/cameraicon"
+                           />
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/backarrow"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:onClick="back"
+                        android:scaleType="center"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/backwhite" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/humn"
+                        android:text="User Info"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/photolayout"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        android:padding="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:id="@+id/userimage"
+                            android:src="@mipmap/profileavatar"
+                            card_view:civ_border_width="1dp"
+                            card_view:civ_border_color="#00000000"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="changephoto"
+                            android:foreground="?selectableItemBackground"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="#00aaff"
+                            android:background="@drawable/orangercircle"
+                            android:scaleType="center"
+                            android:src="@drawable/photo_camera" />
+
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/usernameedit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/photolayout"
+                        android:layout_centerHorizontal="true"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:textColor="#cc000000"
+                        android:fontFamily="@font/humn"
+                        android:text="Mark_John" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="enablename"
+                        android:layout_below="@id/photolayout"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/usernameedit"
+                        android:scaleType="center"
+                        android:src="@drawable/edit" />
+
+                    <RelativeLayout
+                        android:id="@+id/stylename"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/usernameedit"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/namecenterdot"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cicle" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="100dp"
+                            android:layout_toRightOf="@+id/namecenterdot"
+                            android:background="@drawable/line" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/namecenterdot"
+                            android:background="@drawable/line" />
+
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/next"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_below="@+id/stylename"
+                        android:onClick="next"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/orangecontainreverse"
+                        android:fontFamily="@font/humn"
+                        android:text="Next"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+          <!--  <android.support.v7.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="190dp"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardBackgroundColor="#00aaff"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/exo"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="Save Pic"/>
+
+
+            </android.support.v7.widget.CardView>-->
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/photocard">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/tabrelate">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true">
+
+
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/orangercircle"
+                            android:id="@+id/firstcirlce"
+                            android:layout_marginEnd="10dp"/>
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/greycircle"
+                            android:id="@+id/secondcircle"
+                            android:layout_marginEnd="10dp"/>
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/greycircle"
+                            android:id="@+id/thirdcircle"/>
+
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+                <android.support.v4.view.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:id="@+id/infopager"
+                    android:layout_below="@+id/tabrelate"/>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <!--<RelativeLayout
+                android:id="@+id/infocard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/photocard"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/humn"
+                    android:text="Please fill up all the Entry provided below."
+                    android:textColor="#66000000"
+                    android:textSize="11sp" />
+
+
+                <EditText
+                    android:id="@+id/fullnameentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/instruction"
+                    android:layout_marginTop="10dp"
+                    android:maxLength="35"
+                    android:textSize="14sp"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/personstroke"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Fullname"
+                    android:paddingLeft="15dp" />
+
+
+                <EditText
+                    android:id="@+id/phoneentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/fullnameentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Phone Number:eg +2348147616916"
+                    android:inputType="phone"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/birthentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/phoneentry"
+                    android:gravity="center|start"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/date"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Date of Birth: eg 26/04/1999"
+                    android:paddingLeft="15dp" />
+                <TextView
+                    android:id="@+id/genderentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center|start"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/birthentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/gender"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Gender: Male or Female"
+                    android:paddingLeft="15dp" />
+                <EditText
+                    android:id="@+id/originentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center|start"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/genderentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/country"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="State of Origin: eg Anambra or Lagos state"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/countryentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center|start"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/originentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/flag"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Country; eg Nigeria or France"
+                    android:paddingLeft="15dp" />
+
+
+                &lt;!&ndash;The Marrital entry will be removed..../&ndash;&gt;
+
+                <TextView
+                    android:id="@+id/marritalentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/countryentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/marrital"
+                    android:drawablePadding="5dp"
+                    android:gravity="center|start"
+                    android:fontFamily="@font/humn"
+                    android:hint="Status:Married or Single or Not Interested"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/interestinstruct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/marritalentry"
+                    android:fontFamily="@font/humn"
+                    android:text="Please Seperate your Interests with commas.."
+                    android:textColor="#66000000"
+                    android:textSize="11sp" />
+
+
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/interestentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textSize="14sp"
+                    android:paddingBottom="13dp"
+                    android:layout_below="@+id/interestinstruct"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/interest"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Interests: eg Python, Real Madrid etc"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/workstateentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textSize="14sp"
+                    android:paddingBottom="13dp"
+                    android:layout_below="@+id/interestentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/workstate"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Working State: Student / Professional"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/professionentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/workstateentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/college"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Course/Profession:"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/instituteentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/professionentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/institute"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="College/ High School/ Place of Work"
+                    android:paddingLeft="15dp" />.
+
+                &lt;!&ndash;Home address will be removed..../&ndash;&gt;
+
+                <EditText
+                    android:id="@+id/addressentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/instituteentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/homeicon"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Home Address"
+                    android:paddingLeft="15dp" />
+
+
+                &lt;!&ndash;Social Media Handles Endittext/&ndash;&gt;
+
+                <TextView
+                    android:id="@+id/socialmedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/addressentry"
+                    android:fontFamily="@font/humn"
+                    android:text="Your Social Media Handles"
+                    android:textColor="#66000000"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/whatsappentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:inputType="phone"
+                    android:layout_below="@+id/socialmedia"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/whatsapp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Whatsapp Number: eg +2348145617816"
+                    android:paddingLeft="15dp" />
+
+
+                <EditText
+                    android:id="@+id/instagramentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/whatsappentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/instagram"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Instagram Handle"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/facebookentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/instagramentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/facebook"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Facebook Username"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/twitterentry"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/facebookentry"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orangecontain"
+                    android:drawableLeft="@drawable/twitter"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/humn"
+                    android:hint="Twitter Username"
+                    android:paddingLeft="15dp" />
+
+
+                <Button
+                    android:id="@+id/nextclick"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="next"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_below="@+id/twitterentry"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/orangecontainreverse"
+                    android:fontFamily="@font/humn"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>-->
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progresslay"
+        android:visibility="gone"
+        android:background="#33000000">
+
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:indeterminateBehavior="cycle"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:fadingEdge="horizontal"
+            />
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:indeterminateBehavior="cycle"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="10dp"
+            android:rotation="180"
+            />
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "819616124487",
+    "firebase_url": "https://stranger-f9f3c.firebaseio.com",
+    "project_id": "stranger-f9f3c",
+    "storage_bucket": "stranger-f9f3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819616124487:android:2044e37b3743a176",
+        "android_client_info": {
+          "package_name": "com.mactrixapp.www.stranger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819616124487-o2ogfr75mo479av7q2a87bcr3n8ifob3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mactrixapp.www.stranger",
+            "certificate_hash": "41d5e7a9f4ba32a1eb0b6e603c222aedefc422bd"
+          }
+        },
+        {
+          "client_id": "819616124487-fa6k9npae4bnbt2ugqbtjnp5mnhcn38v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB29ypvRP02cwQ5HULIVpz0iRJCIrChs4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819616124487-fa6k9npae4bnbt2ugqbtjnp5mnhcn38v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

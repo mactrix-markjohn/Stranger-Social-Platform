@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardBackgroundColor="#00aaff">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dd000000"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/abovedialog">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kaushanscriptregular"
+                    android:layout_centerInParent="true"
+                    android:text="Send Stranger Letter"
+                    android:textColor="#ddffffff"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/cancel"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cancelwhite"/>
+
+
+            </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineardialog"
+        android:orientation="vertical"
+        android:layout_below="@+id/abovedialog"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:maxLength="10"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Name: "/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/nameswitch"
+                android:layout_marginLeft="5dp"/>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                android:foreground="?selectableItemBackground"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginLeft="5dp"
+                card_view:cardBackgroundColor="#aa000000"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:id="@+id/nameentry"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/humn"
+                    android:textColor="#ccffffff"
+                    android:textColorHint="#99ffffff"
+                    android:hint="Enter Name"
+                    android:enabled="false"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Profession: "/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/professioswitch"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardBackgroundColor="#aa000000"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:foreground="?selectableItemBackground"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:textColor="#ccffffff"
+                    android:id="@+id/professionentry"
+                    android:textSize="13sp"
+                    android:textColorHint="#99ffffff"
+                    android:layout_marginRight="3dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/humn"
+                    android:hint="Enter Profession"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Interest: "/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/interestswitch"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardBackgroundColor="#aa000000"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:foreground="?selectableItemBackground"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:textColor="#ccffffff"
+                    android:textSize="13sp"
+                    android:id="@+id/interestentry"
+                    android:textColorHint="#99ffffff"
+                    android:layout_marginRight="3dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/humn"
+                    android:hint="Enter Interest"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Institute: "/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/instituteswitch"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginLeft="5dp"
+                card_view:cardBackgroundColor="#aa000000"
+                android:foreground="?selectableItemBackground"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="3dp"
+                    android:textColor="#ccffffff"
+                    android:textSize="13sp"
+                    android:id="@+id/instituteentry"
+                    android:textColorHint="#99ffffff"
+                    android:enabled="false"
+                    android:fontFamily="@font/humn"
+                    android:hint="Enter University/Company"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Workstate:"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workstateswitch"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                card_view:cardElevation="5dp"
+                card_view:cardCornerRadius="5dp"
+                android:onClick="workstateclick"
+                card_view:cardBackgroundColor="#aa000000"
+                android:foreground="?selectableItemBackground"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:textSize="13sp"
+                    android:textColor="#ccffffff"
+                    android:textColorHint="#99ffffff"
+                    android:id="@+id/workstateentry"
+                    android:fontFamily="@font/humn"
+                    android:hint="Student/Professional"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="to"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                card_view:cardElevation="5dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginLeft="5dp"
+                android:foreground="?selectableItemBackground"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transperent"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/humn"
+                    android:hint="25"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>-->
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Gender: "/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderswitch"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                card_view:cardElevation="5dp"
+                card_view:cardCornerRadius="5dp"
+                android:onClick="genderclick"
+                card_view:cardBackgroundColor="#aa000000"
+                android:foreground="?selectableItemBackground"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transperent"
+                    android:enabled="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColorHint="#99ffffff"
+                    android:textColor="#ccffffff"
+                    android:id="@+id/genderentry"
+                    android:fontFamily="@font/humn"
+                    android:hint="Male/Female"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="13sp"
+                android:textColor="@color/whitey"
+                android:layout_gravity="center"
+                android:text="Location: "/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/humn"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/whitey"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="Around Me"/>
+
+
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:id="@+id/locationswitch"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:textOn="Other"
+                android:textOff="Surronding"
+                android:textSize="11sp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardBackgroundColor="#aa000000"
+                android:foreground="?selectableItemBackground"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transperent"
+                    android:enabled="false"
+                    android:textSize="13sp"
+                    android:id="@+id/locationentry"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/humn"
+                    android:textColorHint="#99ffffff"
+                    android:textColor="#ccffffff"
+                    android:paddingLeft="5dp"
+                    android:hint="Other Location"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/lineardialog">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:foreground="?selectableItemBackground"
+                    android:id="@+id/sendletter"
+                    card_view:cardBackgroundColor="#99000000"
+                    android:layout_centerInParent="true"
+                    card_view:cardElevation="20dp"
+                    card_view:cardCornerRadius="25dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/send_paper_plane"/>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

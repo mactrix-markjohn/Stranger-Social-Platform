@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/profileavatar"
+        android:id="@+id/commentphoto"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/commentphoto"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:fontFamily="@font/humn"
+            android:textColor="#bb000000"
+            android:id="@+id/commentfullname"
+            android:text="Mark John Chukwuemeka Okparaeke"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/humn"
+            android:maxLines="1"
+            android:textColor="#af000000"
+            android:layout_below="@+id/commentfullname"
+            android:id="@+id/commentusername"
+            android:text="Mark_john"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:fontFamily="@font/humn"
+            android:textColor="#77000000"
+            android:layout_alignBaseline="@+id/commentusername"
+            android:id="@+id/commentdate"
+            android:layout_toRightOf="@+id/commentusername"
+            android:layout_marginLeft="4dp"
+            android:text="05:34 PM May 5, 2019"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="@font/humn"
+            android:textColor="#bf000000"
+            android:layout_below="@+id/commentusername"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/comment"
+            android:text="Hello, My name is Mark John Chukwuemeka, I am a Computeer Science studnt of the University of Ibadan. I am currently in 200 level"
+            android:linksClickable="true"
+            android:saveEnabled="true"
+            android:autoLink="all"/>
+
+        <android.support.v7.widget.CardView android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/comment"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/chattime"
+                android:id="@+id/chatimage"
+                android:background="#ee000000">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/chatvideolay"
+                    android:background="#f7000000"
+                    >
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/chatvideo"
+                        android:layout_centerInParent="true"/>
+
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/f7black"
+                        android:id="@+id/chatvideothumnail"/>
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"
+                        android:indeterminate="true"
+                        android:id="@+id/postvideoprogress"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#66000000"
+                        android:id="@+id/videocontrollay"
+                        android:visibility="visible"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            card_view:cardCornerRadius="20dp"
+                            android:id="@+id/playpausecard"
+                            card_view:cardBackgroundColor="#77999999"
+                            card_view:cardElevation="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:id="@+id/postvideobutton"
+                                android:src="@drawable/play_buttonsmall"/>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

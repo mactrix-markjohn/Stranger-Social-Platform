@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/postbottomview"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/postseperator"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/postbottomview"
+        android:background="@drawable/line"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/horisuggest"
+            android:visibility="gone">
+
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/swiperefresher"
+            android:layout_below="@+id/horisuggest">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/line"
+                android:saveEnabled="true"
+                android:id="@+id/postlist" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/feather_pen_white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/newpost"
+        android:foreground="?selectableItemBackground"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/bottomsheet_comment_lay"/>
+
+</android.support.design.widget.CoordinatorLayout>

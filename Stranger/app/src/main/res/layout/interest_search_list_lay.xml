@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="50dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/profilephoto"
+        android:src="@mipmap/profileavatar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/profilephoto"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userfullname"
+        android:fontFamily="@font/humn"
+        android:textSize="13sp"
+        android:textColor="#bb000000"
+        android:text="Mark John Chukwuemeka Okparaeke"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/userfullname"
+            android:layout_marginLeft="2dp"
+            android:fontFamily="@font/humn"
+            android:text="["
+            android:textColor="#dd00aaff"
+            android:textSize="12sp"
+            android:id="@+id/sep"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_toRightOf="@+id/sep"
+            android:layout_marginLeft="2dp"
+            android:fontFamily="@font/humn"
+            android:maxLines="1"
+            android:textColor="#dd00aaff"
+            android:id="@+id/username"
+            android:text="mark_john"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username"
+            android:layout_marginLeft="2dp"
+            android:fontFamily="@font/humn"
+            android:text="]"
+            android:textColor="#dd00aaff"
+            android:textSize="12sp"
+            android:id="@+id/sepr"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userfullname"
+            android:id="@+id/userextra">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/profession"
+         android:fontFamily="@font/humn"
+         android:textSize="12sp"
+         android:layout_centerVertical="true"
+         android:textColor="#aa000000"
+         android:text="Computer Scientist"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_toRightOf="@+id/profession"
+            android:id="@+id/imasep"
+            android:background="@drawable/greycircle"
+            android:layout_marginLeft="8dp"
+           android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+            android:fontFamily="@font/humn"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imasep"
+            android:layout_marginLeft="8dp"
+            android:textColor="#dd00aaff"
+             android:text="female"/>
+
+            <ImageView
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_toRightOf="@+id/gender"
+            android:id="@+id/seimasep"
+            android:background="@drawable/greycircle"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"/>
+
+            <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/workstate"
+             android:fontFamily="@font/humn"
+             android:textSize="12sp"
+                android:layout_centerVertical="true"
+             android:layout_toRightOf="@+id/seimasep"
+             android:layout_marginLeft="8dp"
+             android:textColor="#dd00aaff"
+             android:text="professional"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

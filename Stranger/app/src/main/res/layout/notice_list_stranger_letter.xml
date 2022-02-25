@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="1dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="2dp"
+        android:textSize="10sp"
+        android:id="@+id/noticetime"
+        android:fontFamily="@font/humn"
+        android:textColor="#88000000"
+        android:text="11:20 PM  Sat 27 May, 2019"/>
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/original"
+            android:id="@+id/userphoto" />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#55000000"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/lettergradient"
+            android:layout_centerVertical="true"/>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/userphoto"
+            android:layout_toLeftOf="@+id/more"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alluraregular"
+                android:textSize="15sp"
+                android:id="@+id/textheader"
+                android:gravity="center"
+                android:drawableLeft="@drawable/send_paper_plane_white"
+                android:drawablePadding="10dp"
+                android:textColor="#ddc00000"
+                android:text="You have received a Letter from" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:textColor="#000000"
+               android:layout_below="@+id/textheader"
+                android:textStyle="bold"
+                android:fontFamily="@font/bernfash"
+                android:textSize="14sp"
+                android:text="Mark John Chukwuemeka Okparaeke" />
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/more"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/moresmalla" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

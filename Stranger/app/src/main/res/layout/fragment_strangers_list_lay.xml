@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="50dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/profilephoto"
+        android:src="@mipmap/profileavatar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/unstrangerclick"
+        android:layout_toRightOf="@+id/profilephoto"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userfullname"
+            android:fontFamily="@font/humn"
+            android:maxLines="1"
+            android:maxLength="40"
+            android:textSize="14sp"
+            android:textColor="#bb000000"
+            android:text="Mark John Chukwuemeka Okparaeke"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:fontFamily="@font/humn"
+            android:textSize="12sp"
+            android:layout_below="@+id/userfullname"
+            android:textColor="#66000000"
+            android:text="mark_john"/>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="#00aaff"
+        card_view:cardCornerRadius="5dp"
+        android:id="@+id/unstrangerclick"
+        android:foreground="?selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/unstrangerclicktext"
+            android:textColor="@color/white"
+            android:fontFamily="@font/humn"
+            android:textSize="12sp"
+            android:text="Unstranger"/>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

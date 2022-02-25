@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/requestbelowlay"
+                android:layout_alignParentBottom="true">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/sepee"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardElevation="2dp"
+                    android:id="@+id/leftclick"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="#f0f0f0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:drawableLeft="@drawable/folder"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/humn"
+                        android:text="Add File"/>
+
+
+                </android.support.v7.widget.CardView>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/sepee"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/create"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="#00aaff"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/groupiconwhite"
+                        android:fontFamily="@font/humn"
+                        android:text="Create Group"/>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/requestbelowlay"
+                android:layout_below="@+id/requestheader"
+                android:id="@+id/requestdescibe">
+
+
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/chatspace"
+                    android:layout_alignParentBottom="true"/>-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        android:id="@+id/groupname"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/chatsend"
+                        android:layout_toRightOf="@+id/chatfile"
+                        app:cardBackgroundColor="#f0f0f0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/transperent"
+                            android:paddingLeft="10dp"
+                            android:gravity="top"
+                            android:paddingRight="10dp"
+                            android:scrollbars="vertical"
+                           android:id="@+id/groupnameentry"
+                            android:textSize="16sp"
+                            android:textColor="#aa000000"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/humn"
+                            android:hint="Group name"
+                            android:textColorHint="#88000000" />
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        android:id="@+id/groupdescription"
+                        android:layout_below="@+id/groupname"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/chatsend"
+                        android:layout_toRightOf="@+id/chatfile"
+                        app:cardBackgroundColor="#f0f0f0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@color/transperent"
+                            android:paddingLeft="10dp"
+                            android:gravity="top"
+                            android:paddingRight="10dp"
+                            android:scrollbars="vertical"
+                            android:id="@+id/groupdescriptionentry"
+                            android:textSize="16sp"
+                            android:textColor="#aa000000"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/humn"
+                            android:hint="Group description"
+                            android:textColorHint="#88000000" />
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/groupimagetext"
+                        android:layout_below="@+id/groupdescription"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/humn"
+                        android:textColor="#bb000000"
+                        android:text="Add a Group Image"/>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/groupimagecard"
+                        android:layout_below="@+id/groupimagetext"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/chatsend"
+                        android:layout_toRightOf="@+id/chatfile"
+                        app:cardBackgroundColor="#f0f0f0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:background="#00aaff"
+                                android:id="@+id/addgroupimage"
+                                android:src="@drawable/photo_camera"
+                                android:scaleType="center"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#09000000"
+                                android:id="@+id/previewgroupimage"
+                                android:scaleType="centerCrop"
+                                />
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+               android:layout_alignParentTop="true"
+                android:id="@+id/requestheader">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="center"
+                    android:foreground="?selectableItemBackground"
+                    android:id="@+id/cancel"
+                    android:src="@drawable/cancel"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:scaleType="center"
+                    android:foreground="?selectableItemBackground"
+                    android:src="@drawable/featherpenblackwhite"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/humn"
+                    android:textColor="#000000"
+                    android:drawableLeft="@drawable/groupicon"
+                    android:drawablePadding="10dp"
+                    android:textSize="16sp"
+                    android:text="Create Group"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

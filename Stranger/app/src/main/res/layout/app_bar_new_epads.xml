@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEPAds"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:foreground="?selectableItemBackground"
+                android:src="@drawable/backblack"
+                android:onClick="back"
+                android:id="@+id/back"
+                android:scaleType="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/back"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/humn"
+                android:textColor="#77000000"
+                android:text="ElectroPhysical Ads"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:foreground="?selectableItemBackground"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/humn"
+                android:onClick="postepad"
+                android:textColor="@color/blurtrans"
+                android:textSize="15sp"
+                android:text="Post EP Ad"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangedeepstroke"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/eptitle"
+                android:fontFamily="@font/humn"
+                android:hint="Enter Title"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eptitle"
+                android:id="@+id/epmedia"
+                android:visibility="gone"
+                android:layout_marginTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/epimage"
+                    android:visibility="gone"
+                    android:background="@color/f7black"
+                    android:src="@mipmap/strangechild"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/eppostvideolay"
+                    android:onClick="epvideolay"
+                    android:visibility="gone"
+                    android:background="#f7000000"
+                    >
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/postvideoview"
+                        android:layout_centerInParent="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#66000000"
+                        android:visibility="visible"
+                        android:id="@+id/epvideocontroller">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/humn"
+                            android:textSize="13sp"
+                            android:id="@+id/videotitle"/>
+
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true"
+                            card_view:cardCornerRadius="35dp"
+                            card_view:cardBackgroundColor="#77ffffff"
+                            card_view:cardElevation="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:onClick="videobutton"
+                                android:id="@+id/postvideobutton"
+                                android:src="@drawable/play_button_sm_black"/>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/comment"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/epaudiocard"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="center"
+                            android:id="@+id/headset"
+                            android:src="@drawable/music_headset"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#aa000000"
+                            android:textSize="13sp"
+                            android:id="@+id/epaudioname"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/playpausecard"
+                            android:layout_toRightOf="@+id/headset"
+                            android:text="James Arthur - Can I be Him.mp3"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/playpausecard"
+                            android:onClick="playpause"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/play_button_sm_black"/>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/comment"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/epfilecard"
+                    app:cardBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="center"
+                            android:id="@+id/folder"
+                            android:src="@drawable/folder"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:fontFamily="@font/humn"
+                            android:textColor="#aa000000"
+                            android:textSize="13sp"
+                            android:id="@+id/epfilename"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/downloadfile"
+                            android:layout_toRightOf="@+id/folder"
+                            android:text="Android-How to Develop.pdf"/>
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/downloadfile"
+                            android:visibility="gone"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/download"/>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                   android:layout_marginLeft="5dp"
+                    android:onClick="cancelmedia"
+                    android:elevation="10dp"
+                    android:background="@drawable/greycircle"
+                    android:scaleType="center"
+                    android:src="@drawable/cancel"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/eppostwriteup"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/epmedia">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/orangecontainstroke"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/epmessage"
+                    android:inputType="none"
+                    android:fontFamily="@font/humn"
+                    android:hint="Write your Ad Message here"
+                    android:textSize="13sp"
+                    android:gravity="start"
+                    android:textColor="#99000000"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/venuelay"
+                android:layout_below="@+id/eppostwriteup"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/humn"
+                    android:textSize="13sp"
+                    android:maxLength="10"
+                    android:layout_gravity="center"
+                    android:text="Venue: "/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#eeeeee"
+                    android:id="@+id/epadvenue"
+                    android:layout_marginRight="3dp"
+                    android:paddingRight="5dp"
+                    android:textSize="14sp"
+                    android:drawableRight="@drawable/map_marker"
+                    android:fontFamily="@font/humn"
+                    android:hint="Enter Event or Business Venue"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/eppostmedialist"
+                android:layout_below="@+id/venuelay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addphoto"
+                        android:foreground="?selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/camerablack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:fontFamily="@font/humn"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"
+                            android:text="Add Photo"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addvideo"
+                        android:foreground="?selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="center"
+                            android:src="@drawable/video_camera"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:fontFamily="@font/humn"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"
+                            android:text="Add Video"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addfile"
+                        android:foreground="?selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="center"
+                            android:rotation="45"
+                            android:src="@drawable/file"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:fontFamily="@font/humn"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"
+                            android:text="Add File"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/eppostmedialist"
+                android:id="@+id/eplocationlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/humn"
+                    android:text="Add Location"
+                    android:id="@+id/locationtext"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/locationtext"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    card_view:cardCornerRadius="5dp"
+                    android:id="@+id/mapcard"
+                    android:onClick="openmap"
+                    android:foreground="?selectableItemBackground"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardElevation="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blurtrans"
+                        android:fontFamily="@font/humn"
+                        android:textSize="13sp"
+                        android:text="Open Map"/>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/locationtext"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    card_view:cardCornerRadius="5dp"
+                    android:id="@+id/mylocation"
+                    android:layout_toRightOf="@+id/mapcard"
+                    android:onClick="mylocation"
+                    android:foreground="?selectableItemBackground"
+                    card_view:cardBackgroundColor="@color/blurtrans"
+                    card_view:cardElevation="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/humn"
+                        android:textSize="13sp"
+                        android:text="My Location"/>
+
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mapcard"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textSize="13sp"
+                            android:maxLength="10"
+                            android:layout_gravity="center"
+                            android:text="Latitude: "/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:background="#eeeeee"
+                            android:paddingRight="5dp"
+                            android:id="@+id/eplatitude"
+                            android:hint="Your Location Latitude"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:textSize="14sp"
+                                android:drawableRight="@drawable/map_marker"
+                                android:fontFamily="@font/humn"
+                            android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textSize="13sp"
+                            android:maxLength="10"
+                            android:layout_gravity="center"
+                            android:text="Longitude: "/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:background="#eeeeee"
+                            android:paddingRight="5dp"
+                            android:hint="Your Locaton Longitude"
+                            android:id="@+id/eplongitude"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:textSize="14sp"
+                                android:drawableRight="@drawable/map_marker"
+                                android:fontFamily="@font/humn"
+
+
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/humn"
+                            android:textSize="13sp"
+                            android:maxLength="10"
+                            android:layout_gravity="center"
+                            android:text="Address: "/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:background="#eeeeee"
+                                android:layout_gravity="center"
+                                android:id="@+id/epaddress"
+                            android:hint="Your Location Address"
+                                android:layout_marginRight="3dp"
+                                android:paddingRight="5dp"
+                                android:textSize="14sp"
+                                android:drawableRight="@drawable/map_marker"
+                                android:fontFamily="@font/humn"
+
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="postepad"
+                android:layout_below="@+id/eplocationlayout"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/eppost"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@color/blurtrans"
+                card_view:cardElevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/humn"
+                    android:textSize="14sp"
+                    android:text="Post EP Ad"/>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+    <!--include layout="@layout/content_new_epads" /-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

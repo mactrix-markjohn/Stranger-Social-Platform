@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/humn"
+        android:textColor="#cc000000"
+        android:textSize="16sp"
+        android:id="@+id/instr"
+        android:gravity="center"
+        android:text="Enter your interest below. Ensure that you seperate each interest with a COMMA."/>
+
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/interestentry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/instr"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="13dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/orangecontain"
+        android:drawableLeft="@drawable/interest"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/humn"
+        android:hint="Interests: eg Python, Real Madrid etc"
+        android:paddingLeft="15dp" />
+
+
+    <Button
+        android:id="@+id/nextclick"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/interestentry"
+        android:foreground="?selectableItemBackground"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/orangecurverec"
+        android:fontFamily="@font/exo"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

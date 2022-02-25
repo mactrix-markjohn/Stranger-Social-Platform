@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StrangerLetterViewer">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/letterbackimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/purplefly" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/bell">
+
+            <android.support.v7.widget.CardView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:cardBackgroundColor="#44ffffff"
+                app:cardCornerRadius="10dp"
+                app:contentPaddingRight="5dp"
+                app:contentPaddingLeft="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000000"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp"
+                    android:text="Stranger Letter"
+                    android:fontFamily="@font/kaushanscriptregular" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/ba"
+                android:onClick="back"
+                app:cardBackgroundColor="#44ffffff"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:foreground="?selectableItemBackground"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/backblack" />
+            </android.support.v7.widget.CardView>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/strangerphoto"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/strangeralone"/>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/kaushanscriptregular"
+            android:background="@color/transperent"
+            android:layout_below="@+id/bell"
+            android:layout_marginRight="55dp"
+            android:layout_above="@+id/strangerprofile"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/letterpaper"
+            android:textColor="#dd000000"
+            android:textSize="16sp"
+            android:textColorHint="#dd000000"
+            android:scrollbars="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:hint="Hello Stranger,\n\nWrite You Letter here and select features of the person/persions you want this letter to be sent to. You may be surprised at the outcome of this action, you can meet a Project Partner from here, you can meet a Life time friend here, you can also meet your soul mate. The power is in your Hand, So Explore!!.\n\nThank you"
+            android:paddingTop="20dp"
+            android:gravity="start"/>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardBackgroundColor="#bb00aaff"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:foreground="?selectableItemBackground"
+            android:onClick="strangerprofile"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/strangerprofile"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alluraregular"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="Know more about this Stranger"/>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+   <!-- <include layout="@layout/content_stranger_letter_viewer" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>
